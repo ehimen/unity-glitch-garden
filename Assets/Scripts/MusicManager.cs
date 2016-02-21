@@ -16,6 +16,11 @@ public class MusicManager : MonoBehaviour {
         audioSource = GetComponent<AudioSource>();
     }
 
+    public void ChangeVolume(float volume)
+    {
+        audioSource.volume = volume;
+    }
+
     void OnLevelWasLoaded(int level)
     {
         if (audioSource && clipsForLevels[level])
