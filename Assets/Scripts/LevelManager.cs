@@ -3,11 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
-    public float loadNextDelay = 2.5f;
+    public float loadNextDelay = 0f;
 
     void Start()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 0)
+        if (loadNextDelay > 0)
         {
             Invoke("LoadNextLevel", loadNextDelay);
         }
